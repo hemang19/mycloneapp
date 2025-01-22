@@ -6,21 +6,19 @@ export default function App() {
     <View style={styles.container}>
       {/* Top Navigation */}
       <View style={styles.topNav}>
-
-        <View style={styles.icons}>
-         
-        </View>
+      <StatusBar backgroundColor='#000000' style='light' />
       </View>
 
       {/* Categories Section */}
       <View style={styles.categories}>
         <Text style={styles.categoryText}>All</Text>
+        <Text style={styles.categoryText}>Sports</Text>
+        <Text style={styles.categoryText}>Clothes</Text>
       </View>
 
       {/* Scrollable Image Section */}
       <ScrollView contentContainerStyle={styles.imageGrid}>
         <View style={styles.imageRow}>
-          {/* Replace 'YOUR_IMAGE_URL' with the link to your image */}
           <TouchableOpacity style={styles.imagePlaceholder}>
             <Image
               source={{ uri: 'https://imageio.forbes.com/specials-images/imageserve/6531830aaae52b9426047849/1x1-social-LeBron-James-by-Harry-How-Getty-Images/0x0.jpg?format=jpg&height=1080&width=1459' }}
@@ -70,38 +68,33 @@ export default function App() {
       <View style={styles.bottomNav}>
         <TouchableOpacity style={styles.navButton}>
           <Image 
-            source={{ uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSngrH8eyx_-ET3o8ffqU7hfYWDld7KUOfTVw&s' }} // Replace with your image URL
-            style={styles.navIcon} // Style the image as an icon
+            source={require('./assets/home-icon.png')}
+            style={styles.navIcon} 
           />
-          <Text style={styles.navText}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.navButton}>
-        <Image 
-    source={{ uri: 'https://e7.pngegg.com/pngimages/342/516/png-clipart-computer-icons-search-icon-zooming-user-interface-computer-icons-thumbnail.png' }} // Replace this with the URL of your image
-    style={styles.navIcon}
-  />
-          <Text style={styles.navText}>Search</Text>
+          <Image 
+            source={require('./assets/search-icon.png')}
+            style={styles.navIcon}
+          />
         </TouchableOpacity>
         <TouchableOpacity style={styles.navButton}>
-        <Image 
-    source={{ uri: 'https://static.vecteezy.com/system/resources/previews/026/220/740/non_2x/create-icon-symbol-design-illustration-vector.jpg' }} // Replace this with the URL of your image
-    style={styles.navIcon}
-  />
-          <Text style={styles.navText}>Create</Text>
+          <Image 
+            source={require('./assets/add-icon.png')} 
+            style={styles.navIcon}
+          />
         </TouchableOpacity>
         <TouchableOpacity style={styles.navButton}>
-        <Image 
-    source={{ uri: 'https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-notification-icon-png-image_4187244.jpg' }} // Replace this with the URL of your image
-    style={styles.navIcon}
-  />
-          <Text style={styles.navText}>Notifications</Text>
+          <Image 
+            source={require('./assets/messages-icon.png')}
+            style={styles.navIcon}
+          />
         </TouchableOpacity>
         <TouchableOpacity style={styles.navButton}>
-        <Image 
-    source={{ uri: 'https://png.pngtree.com/png-vector/20201226/ourmid/pngtree-line-icon-save-png-image_2644818.jpg' }} // Replace this with the URL of your image
-    style={styles.navIcon}
-  />
-          <Text style={styles.navText}>Saved</Text>
+          <Image 
+            source={require('./assets/profile-icon.png')} 
+            style={styles.navIcon}
+          />
         </TouchableOpacity>
       </View>
 
@@ -125,16 +118,6 @@ const styles = StyleSheet.create({
   time: {
     color: '#fff',
     fontSize: 18,
-  },
-  icons: {
-    flexDirection: 'row',
-  },
-  icon: {
-    width: 20,
-    height: 20,
-    backgroundColor: '#fff',
-    marginLeft: 10,
-    borderRadius: 10,
   },
   categories: {
     paddingHorizontal: 20,
@@ -173,19 +156,16 @@ const styles = StyleSheet.create({
   bottomNav: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: '#111',
-    paddingVertical: 10,
+    backgroundColor: '#000000',
+    paddingTop: 5,
+    paddingBottom: 10,
+    marginHorizontal: 40,
   },
   navButton: {
     alignItems: 'center',
   },
-  navText: {
-    color: '#fff',
-    fontSize: 12,
-  },
   navIcon: {
-    width: 30, // Adjust width and height to your desired size
-    height: 30, // Adjust as needed
-    marginBottom: 5, // Add some spacing between the icon and text
+    width: 60,
+    height: 60,
   },
 });
