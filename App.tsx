@@ -4,16 +4,21 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image } from 'rea
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* Top Navigation */}
+      {/* Status Bar */}
       <View style={styles.topNav}>
       <StatusBar backgroundColor='#000000' style='light' />
       </View>
 
-      {/* Categories Section */}
+      {/* Categories Section (Top Nav) */}
       <View style={styles.categories}>
-        <Text style={styles.categoryText}>All</Text>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <Text style={{ ...styles.categoryText, borderBottomColor: '#ffffff', borderBottomWidth: 2}}>All</Text>
         <Text style={styles.categoryText}>Sports</Text>
         <Text style={styles.categoryText}>Clothes</Text>
+        <Text style={styles.categoryText}>Electronics</Text>
+        <Text style={styles.categoryText}>Food</Text>
+        <Text style={styles.categoryText}>Books</Text>
+        </ScrollView>
       </View>
 
       {/* Scrollable Image Section */}
@@ -107,30 +112,31 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
-    paddingTop: 20,
+    paddingTop: 30,
   },
   topNav: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 20,
     paddingVertical: 10,
   },
-  time: {
-    color: '#fff',
-    fontSize: 18,
-  },
+
+  // Categories Section (Top Nav)
   categories: {
-    paddingHorizontal: 20,
-    marginBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#000000',
+    paddingTop: 5,
+    paddingBottom: 10,
+    marginHorizontal: 15,
   },
   categoryText: {
     color: '#fff',
-    fontSize: 18,
-    borderBottomWidth: 2,
-    borderBottomColor: '#fff',
-    paddingBottom: 5,
-    width: 50,
+    fontSize: 16,
+    fontWeight: 'bold',
+    paddingVertical: 5,
+    paddingHorizontal: 14,
+    textAlign: 'center',
   },
+
+  // Content Section
   imageGrid: {
     alignItems: 'center',
   },
@@ -153,6 +159,8 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 10,
   },
+
+  // Bottom Navigation
   bottomNav: {
     flexDirection: 'row',
     justifyContent: 'space-around',
