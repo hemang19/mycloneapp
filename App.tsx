@@ -150,6 +150,12 @@ export default function App() {
             />
           </TouchableOpacity>
         </View>
+
+      <View> 
+        <TouchableOpacity onPress={() => {alert ("Wasssuuppp? :p");}}>
+          <Text style={styles.alertButton}>Click me for a surprise!</Text>
+        </TouchableOpacity>
+      </View>
       </ScrollView>
 
       {/* Bottom Navigation ------------------------------------------------------------------------------- */}
@@ -240,6 +246,19 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     backgroundColor: '#fff',
+  },
+
+  // Alert Button
+  alertButton: {
+    backgroundColor: '#808080',
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    padding: 12,
+    marginHorizontal: 40,
+    marginBottom: 20,
+    borderRadius: 10,
   },
 
   // Bottom Navigation
