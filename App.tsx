@@ -54,6 +54,36 @@ export default function App() {
               style={styles.seeMoreIcon}
             />
           </TouchableOpacity>
+          <TouchableOpacity style={styles.imageRow}>
+            <Image
+              source={require('./assets/pexels-rajesh-tp-749235-1603901.jpg')}
+              style={styles.image}
+            />
+            <Image
+              source={require('./assets/see-more-icon.png')}
+              style={styles.seeMoreIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imageRow}>
+            <Image
+              source={require('./assets/pexels-cottonbro-4066288.jpg')}
+              style={styles.image}
+            />
+            <Image
+              source={require('./assets/see-more-icon.png')}
+              style={styles.seeMoreIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imageRow}>
+            <Image
+              source={require('./assets/pexels-valeriya-842571.jpg')}
+              style={styles.image}
+            />
+            <Image
+              source={require('./assets/see-more-icon.png')}
+              style={styles.seeMoreIcon}
+            />
+          </TouchableOpacity>
         </View>
         
         {/* Left Column Section */}
@@ -82,6 +112,36 @@ export default function App() {
           <TouchableOpacity style={styles.imageRow}>
             <Image
               source={{ uri: 'https://www.shutterstock.com/image-illustration/this-adorable-cartoon-depiction-features-600nw-2308962209.jpg' }}
+              style={styles.image}
+            />
+            <Image
+              source={require('./assets/see-more-icon.png')}
+              style={styles.seeMoreIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imageRow}>
+            <Image
+              source={require('./assets/pexels-tesla-lee-1304809-3857400.jpg')}
+              style={styles.image}
+            />
+            <Image
+              source={require('./assets/see-more-icon.png')}
+              style={styles.seeMoreIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imageRow}>
+            <Image
+              source={require('./assets/pexels-camcasey-1152853.jpg')}
+              style={styles.image}
+            />
+            <Image
+              source={require('./assets/see-more-icon.png')}
+              style={styles.seeMoreIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imageRow}>
+            <Image
+              source={require('./assets/pexels-rickyrecap-1907785.jpg')}
               style={styles.image}
             />
             <Image
